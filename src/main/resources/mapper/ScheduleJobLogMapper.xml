@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE
+        mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.springboot.mapper.ScheduleJobLogDao">
+
+    <insert id="insert" parameterType="com.example.springboot.model.ScheduleJobLog" useGeneratedKeys="true">
+        insert into schedule_job_log (id,
+                                      job_id,
+                                      bean_name,
+                                      method_name,
+                                      method_params,
+                                      result,
+                                      error,
+                                      times,
+                                      create_date)
+        values (#{id},
+                #{jobId},
+                #{beanName},
+                #{methodName},
+                #{methodParams},
+                #{result},
+                #{error},
+                #{times},
+                #{createDate})
+    </insert>
+
+</mapper>
